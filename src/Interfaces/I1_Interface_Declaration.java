@@ -10,6 +10,7 @@ abstract class I1_Interface_Declaration implements inter{
     // the method m2() of interface in the class
 
     public void m1(){
+
     }
 }
 
