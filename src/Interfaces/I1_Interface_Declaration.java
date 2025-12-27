@@ -13,6 +13,16 @@ abstract class I1_Interface_Declaration implements inter{
 
     }
 }
+/*
+public class I1_Interface_Declaration implements inter{
+
+    //we are declaring the class as "abstract" because we haven't declare
+    // the method m2() of interface in the class
+
+    public void m1(){
+
+    }
+}
 
 /*
 * “In Java, an interface is a service requirement specification.”
