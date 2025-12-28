@@ -1,0 +1,22 @@
+Multithreading =Executing multiple tasks simultaneously is known as the multithreading.
+
+1)process based multitasking=executing several tasks simultaneously where each task is
+                            separate independant process is known as the process based multitasking.
+e.g -1) listening the song on the computer
+      2)doing calculation on the same machine
+      3)doing the coding at the same time
+* process are the heavyweight task that required their own separate address space
+* it is independent of each other
+*process based multitasking is best suitable for OS level
+
+2)Thread based multitasking= executing several task simultaneously where is task is
+                            separate independent part of same program
+
+* Thread = thread is the smallest unit of dispatchable code
+
+to develop the web server and appliction servers there we can use multithreading
+
+*******Ways to create the thread ******************
+1)By extending thread class
+2)By implementing runnable interface
+

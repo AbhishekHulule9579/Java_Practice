@@ -20,9 +20,12 @@ public class I1_Interface_Declaration implements inter{
     // the method m2() of interface in the class
 
     public void m1(){
-
     }
-}
+    public void m2(){
+    }
+ */
+
+
 
 /*
 * “In Java, an interface is a service requirement specification.”
