@@ -20,3 +20,15 @@ to develop the web server and appliction servers there we can use multithreading
 1)By extending thread class
 2)By implementing runnable interface
 
+*************case 3 - importance of thread class start method**************
+-->thread class start method is responsible to register with the thread shredular and all other mandatory
+activities,hence without executing thread class start there is no chance of starting a new thread in java
+due to this thread class start method is considered as heart of multithreading
+
+start(){
+1).Register this thread with thread schedular
+2).perform all other mandatory activities
+3).invoke run()
+}
+
+****************case 4 -
