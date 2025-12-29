@@ -19,3 +19,16 @@ public class T2_Child_Dema {
              child    main
 
  */
+
+/*
+main thread
+Child Thread
+Child Thread
+Child Thread
+main thread
+main thread
+main thread
+Child Thread
+Child Thread
+main thread
+*/
