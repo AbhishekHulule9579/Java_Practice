@@ -30,5 +30,25 @@ start(){
 2).perform all other mandatory activities
 3).invoke run()
 }
+// for reference code - T2_Child_Dema
 
-****************case 4 -
+****************case 4 -Overloading of the run method*************
+overloading of run method is always possible but thread class start method can invoke no-argument run method
+the other overloaded method we have call explicity like a normal method call
+
+for reference -code --- T3_No_Thread_Calling.java
+
+*****************case 5 - if we are not overriding run method*******************
+it is higly recommended to override run method otherwise don't go for multithreading concept
+
+**for reference code -- T4_Not_Overriding_run_Method
+
+*******************case 6 - overriding of start method *********
+if we override start method then our start method will be executed just like the normal method call
+and the new thread won't be created
+
+**for reference code -- T5_Overriding_Run_Method
+
+
+Note -- it is not recommended to override start method otherwise don't go for multithreading concept
+
