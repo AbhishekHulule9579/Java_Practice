@@ -17,10 +17,12 @@ e.g -1) listening the song on the computer
 to develop the web server and appliction servers there we can use multithreading
 
 *******Ways to create the thread ******************
+
 1)By extending thread class
 2)By implementing runnable interface
 
 *************case 3 - importance of thread class start method**************
+
 -->thread class start method is responsible to register with the thread shredular and all other mandatory
 activities,hence without executing thread class start there is no chance of starting a new thread in java
 due to this thread class start method is considered as heart of multithreading
@@ -33,17 +35,20 @@ start(){
 // for reference code - T2_Child_Dema
 
 ****************case 4 -Overloading of the run method*************
+
 overloading of run method is always possible but thread class start method can invoke no-argument run method
 the other overloaded method we have call explicity like a normal method call
 
 for reference -code --- T3_No_Thread_Calling.java
 
 *****************case 5 - if we are not overriding run method*******************
+
 it is higly recommended to override run method otherwise don't go for multithreading concept
 
 **for reference code -- T4_Not_Overriding_run_Method
 
 *******************case 6 - overriding of start method *********
+
 if we override start method then our start method will be executed just like the normal method call
 and the new thread won't be created
 
@@ -52,3 +57,24 @@ and the new thread won't be created
 
 Note -- it is not recommended to override start method otherwise don't go for multithreading concept
 
+*****************case 7 - super method in the thread class**************
+
+we can run the all thread in the particular class
+
+for reference code - T6_Overriding_Run_Method_2
+
+******************* case 8- thread Lifecycle ***************************
+
+mytherad t=new mythread();      **t.start();**               *thread start allocate process *               *if run method
+***new/Born**           ---------------------------->Ready/--------------------------------------->Running -------------------->Dead
+                                                    Runnable                                                *completed*
+
+*****************case 9 - restarting the same thread again ***********************
+
+after starting the thread if we are trying to restart the same thread then we will get run time exception saying
+illegal thread exception
+
+For reference code -- T7_Restarting_the_same_exception_again
+
+/*Output
+* Exception in thread "main" java.lang.IllegalThreadStateException*/
