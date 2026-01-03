@@ -1,0 +1,6 @@
+
+**************** Defining the thread by the runnable interface **************************
+* 1st approach of the thread =-->mythread -->Thread-->Runnable(Interface)
+*2nd approach of the thread =--> myRunnable-->Runnable(Interface)
+
+Runnable interface present in Java.lang package and it contains only one method -->Run() method  [public void run()]
