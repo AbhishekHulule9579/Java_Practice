@@ -4,3 +4,61 @@
 *2nd approach of the thread =--> myRunnable-->Runnable(Interface)
 
 Runnable interface present in Java.lang package and it contains only one method -->Run() method  [public void run()]
+
+
+**************- case study *****************************
+
+class myRunnable implements Runnable{
+    public void run(){
+        for(int i=0;i<5;i++){
+            System.out.println(i);
+        }
+    }
+}
+public class T8_MyRunnable_Interface {
+    public static void main(String[] args) {
+        myRunnable r=new myRunnable();
+        Thread t1=new Thread(r);
+        Thread t2=new Thread(r);
+
+cases-
+1)case 1 - t1.start();
+ A new thread will be created which is responsible for the execution of the thread class run method,which has
+ empty implementation
+
+2)case 2 - t1.run();
+ No new thread will be created and the thread class riun method will be executeed just like the normal
+ method call.
+
+3)case 3 - t2.start();
+ A new thread will be created which is responsible for the execution of myRunnable class run method
+
+4)case 4 - t2.run();
+ A new thread won't be create and the myRunnable run method will be executed just like a normal method call
+
+5)case 5 - r.start();
+ we will get compile time error saying "myRunnable doesn't have start capability"
+ "Complile time error - cannot find the symbol"  , symbol:method start() , location - class myRunnable
+
+6)case 6 - r.run():
+ no new thread will be created and the myRunnable run method will be executed like normal method call
+
+ *********************************************************************************************************************
+from the 2 approach of the thread creation -
+1)by extending the thread class
+2)by implementing the runnable interface
+
+Among 2 ways of the defining the thread implement runnable approach is recomended
+Reasons- [we use approach 2 most reasons]=
+1)   a)in the first [1st] approach our class always extend thread class,there is no chance of extending any other class
+    hence we are missing the inheritence benefit
+    b) but in the second [2nd] approach by implementing runnable interface we can extends any other class
+    hence we won't miss any benefit of the inheritence
+    **because of the above reason implementing runnable interface approach is recomended than extending the thread
+    class
+
+*****the second approcah is most used  beacuse for approach 1 we are extending the thread class and therefore
+we are unable to extends the another parent class (Inheritence).
+and for the 2nd approach we can extend the parrent class ******
+
+
