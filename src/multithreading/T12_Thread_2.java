@@ -17,3 +17,4 @@ public class T12_Thread_2 {
         }
     }
 }
+// some platform won't provide proper support for thread priority
