@@ -1,0 +1,18 @@
+
+************ Thread Join *****************
+
+if your thread wants to wait until completing some other thread then we should go for join method
+
+*for example ,if your thread t1 wants to wait until completing t2 then t1 has to call t2.join() .
+if t1 execute t2.join then immediately t1 will be entered into waiting states until t2 completes .
+once t2 complete then t1 can continue it's execution
+
+Join way to announce
+
+1)public void join()     --->Thrown Interrupted Exception
+2)public void join(long millisecond)   -->Thrown Interrupted Exception
+3)public void join(long millisecond,int macrosecond)    --->Thrown InterruptedException
+
+** Note- Every join method throws Interrupted Exception which is checked exception ,hence compulsory we should handle
+ this exception either by using try catch or throws exception otherwise we will get compile time error
+

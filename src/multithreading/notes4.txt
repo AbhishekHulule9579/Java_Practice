@@ -26,3 +26,4 @@ mytherad t=new mythread();      **t.start();**               *thread start alloc
 ***new/Born**           ---------------------------->Ready/--------------------------------------->Running -------------------->Dead
                                                     Runnable                                                *completed*
 
+for reference -->T13_Thread_Yeild
