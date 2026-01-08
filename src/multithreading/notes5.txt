@@ -30,3 +30,29 @@ like deadlock)  ,in this case thread has to wait infinite amount of time
 *****************Thread Sleep *************************
 if your thread don't want to perform any operation for a particular amount of time then we should go for sleep
 method
+
+** 2 ways of the sleep method declaration**
+1)public static native void sleep(long millsecond)            -->throws Interupted Exception    //not implemented in java
+2)public static void sleep(long millesecond,int nanosecond)   -->throws Interupted Exception
+
+Note = every sleep method throws Interrupted Exception, which is checked exception ,hence whenever we are using
+sleep method compulsory we should handle Interrupted Exception either by try catch or by throws keywords otherwise
+we will get compile time error
+
+** for reference - T17_Thread_Sleep_1
+
+** A thread can interrupt a sleeping thread or waiting thread by using interrupt method of the thread class---
+-->public void interrupt()
+
+** for reference --> T18_Thread_Sleep_2
+
+**Note - whenever we are calling interrupt method if the target thread not in sleeping state or waiting state
+then  there is no impact of interrupt call immediately interrupt call will be waited until target thread entered into
+sleeping or waiting state if the target thread entered in the sleeping or waiting state then immediately interupt
+call will interrupt the target thread.
+
+if the target thread never entered into sleeping or waiting state i it's lifetime then there is no impact of
+interrupt call this is the only case where interrupt call will be wasted .
+
+
+comparison table of yield ,join and sleep method
