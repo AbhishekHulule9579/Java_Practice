@@ -16,3 +16,17 @@ Join way to announce
 ** Note- Every join method throws Interrupted Exception which is checked exception ,hence compulsory we should handle
  this exception either by using try catch or throws exception otherwise we will get compile time error
 
+** for reference -->T15_Thread_Join_Demo
+
+case 3 - if main thread calls join method on child thread object and child thread calls join method on the
+main thread object then both threads will wait forever and the program will be strucked (this is something like deadlock)
+
+case 4 - if your threads calls join method on the same thread itself then the program will be strucked (this is something
+like deadlock)  ,in this case thread has to wait infinite amount of time
+
+**referece --->T16_Thread_Dead
+
+
+*****************Thread Sleep *************************
+if your thread don't want to perform any operation for a particular amount of time then we should go for sleep
+method
