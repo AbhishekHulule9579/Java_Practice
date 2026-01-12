@@ -62,14 +62,60 @@ comparison table of yield ,join and sleep method
 
 *if multiple thread are trying to operate simultaneously on the same java object then their may be a chance
 of data inconsistency problem to overcome this problem we should go for synchronized key word
+
 *if your are blocked declared as synchronized then at a time only one thread is allowed to execute the method
 are blocked on the given object so that data inconsistecy problem will be resolved
+
 *the main advantage of synchronize keyword is we can resolve the data inconsistency problem but the main disadvantage
 of the synchronize keyword is it increases waiting time of the threads and create performance problems ,hence if there is
 no specific requirement then it is not recommended to use synchronize keyword.
+
 *internally synchronization is implemented by using lock every object in java has a unique lock ,whenever we are using
 synchronized keyword then only lock concept will come into the picture .
+
 *if thread want to execute synchronized method on the given object first it has to get lock of that object once thread got
 the lock then it is allowed to execute any synchronized method on that object once method execution completes
 automatically thread released the lock
+
 *aquiring and releasing lock internally takes care by JVM and programmer is not responsible for this activity
+
+* while a thread executing synchronized method on the given object the remaining thread are not allowed to execute
+any synchronized method simultaneously on the same object , but remaining thread are allowed to execute non synchronized
+method simultaneously
+example-->
+class{
+    sync m1()
+    sync m2()
+    m3()
+}
+on this object t1 came to execute m1 method (it will start executed)if t2 came to execute the m1 method (waiting state) t3 came to
+execute m2 (waiting state) t4 came to execute m3 method (it will get chance immediately)
+
+*lock concept is implemented based on the object but not based on method
+
+*non-synchronized area-- This area can be accessed by any no. of thread simultaneously
+*synchronized area -- this area can be accessed by ony one thread at a one time.
+
+example -->
+ class{
+    synchronized area (){
+    where ever we are performing the update operation (add/update/delete/remove) i.e where state of the object changing
+    so this area should be inside the synchronized area
+    }
+    non-synchronized area(){
+    where ever object state won't be changed like read operation
+    }
+ }
+
+example 2 -->
+class Reservation(){
+     check Avaiablility(){  //non-synchronized
+        read operation
+     }
+     book Ticket(){      //synchronized
+        update
+     }
+}
+
+for reference ----> T20_Thread_Synchronization
+
