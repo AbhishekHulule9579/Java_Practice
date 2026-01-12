@@ -54,5 +54,22 @@ call will interrupt the target thread.
 if the target thread never entered into sleeping or waiting state i it's lifetime then there is no impact of
 interrupt call this is the only case where interrupt call will be wasted .
 
-
 comparison table of yield ,join and sleep method
+
+*****************Synchronzice Method in the java ********************
+
+*Synchronized is the modifier applicable only for the method and a block but not for classes and variables
+
+*if multiple thread are trying to operate simultaneously on the same java object then their may be a chance
+of data inconsistency problem to overcome this problem we should go for synchronized key word
+*if your are blocked declared as synchronized then at a time only one thread is allowed to execute the method
+are blocked on the given object so that data inconsistecy problem will be resolved
+*the main advantage of synchronize keyword is we can resolve the data inconsistency problem but the main disadvantage
+of the synchronize keyword is it increases waiting time of the threads and create performance problems ,hence if there is
+no specific requirement then it is not recommended to use synchronize keyword.
+*internally synchronization is implemented by using lock every object in java has a unique lock ,whenever we are using
+synchronized keyword then only lock concept will come into the picture .
+*if thread want to execute synchronized method on the given object first it has to get lock of that object once thread got
+the lock then it is allowed to execute any synchronized method on that object once method execution completes
+automatically thread released the lock
+*aquiring and releasing lock internally takes care by JVM and programmer is not responsible for this activity
