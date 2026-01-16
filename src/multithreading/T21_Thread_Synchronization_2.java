@@ -86,6 +86,7 @@ synchronized method of that class simultaneously, but remaining threads are allo
 simultaneously  -->1)normal static method
                     2)synchronized instance methods
                     3)normal instance method
+
 ex.---->
 class xxx{
     static synch m1()
