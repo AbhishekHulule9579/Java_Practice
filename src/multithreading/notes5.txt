@@ -13,7 +13,7 @@ Join way to announce
 2)public void join(long millisecond)   -->Thrown Interrupted Exception
 3)public void join(long millisecond,int macrosecond)    --->Thrown InterruptedException
 
-** Note- Every join method throws Interrupted Exception which is checked exception ,hence compulsory we should handle
+** Note-Every join method throws Interrupted Exception which is checked exception ,hence compulsory we should handle
  this exception either by using try catch or throws exception otherwise we will get compile time error
 
 ** for reference -->T15_Thread_Join_Demo
@@ -24,7 +24,7 @@ main thread object then both threads will wait forever and the program will be s
 case 4 - if your threads calls join method on the same thread itself then the program will be strucked (this is something
 like deadlock)  ,in this case thread has to wait infinite amount of time
 
-**referece --->T16_Thread_Dead
+** reference --->T16_Thread_Dead
 
 
 *****************Thread Sleep *************************
@@ -32,8 +32,8 @@ if your thread don't want to perform any operation for a particular amount of ti
 method
 
 ** 2 ways of the sleep method declaration**
-1)public static native void sleep(long millsecond)            -->throws Interupted Exception    //not implemented in java
-2)public static void sleep(long millesecond,int nanosecond)   -->throws Interupted Exception
+1)public static native void sleep(long millisecond)            -->throws Interrupted Exception    //not implemented in java
+2)public static void sleep(long millisecond,int nanosecond)   -->throws Interrupted Exception
 
 Note = every sleep method throws Interrupted Exception, which is checked exception ,hence whenever we are using
 sleep method compulsory we should handle Interrupted Exception either by try catch or by throws keywords otherwise
@@ -48,7 +48,7 @@ we will get compile time error
 
 **Note - whenever we are calling interrupt method if the target thread not in sleeping state or waiting state
 then  there is no impact of interrupt call immediately interrupt call will be waited until target thread entered into
-sleeping or waiting state if the target thread entered in the sleeping or waiting state then immediately interupt
+sleeping or waiting state if the target thread entered the sleeping or waiting state then immediately interrupt
 call will interrupt the target thread.
 
 if the target thread never entered into sleeping or waiting state i it's lifetime then there is no impact of
@@ -56,7 +56,7 @@ interrupt call this is the only case where interrupt call will be wasted .
 
 comparison table of yield ,join and sleep method
 
-*****************Synchronzice Method in the java ********************
+*****************Synchronize Method in the java ********************
 
 *Synchronized is the modifier applicable only for the method and a block but not for classes and variables
 

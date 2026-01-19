@@ -5,24 +5,24 @@ of same priority ,if there is no waiting thread or all waiting thread have low p
 can continue it's execution
 
 *if multiple thread are waiting with the same priority then ,which waiting thread will get chance --> we can't
-exepect it's depend on the thread schedular
+expect it's depend on the thread schedular
 
-*the thread which is yielded ,when will it get chance once again it depends on Thread schedular and we can't except exactly
+*the thread which is yielded ,when will it get chance once again it depends on Thread schedular, and we can't except exactly
 
-*yeild method causes to pass current executing thread to give the chance to the same priority
-*the thread which is yielded we can't when will it run it totally dependes on the thread schedular
+*yield method causes to pass current executing thread to give the chance to the same priority
+*the thread which is yielded we can't when will it run it totally depends on the thread schedular
 
 **** complete prototype of the yield method ****
 public static native void yield()
 
 ******thread lifecycle if there is the yield method ****************
 
-                                                         Thread.yeid();
+                                                         Thread.yeild();
                                                         --------------------------------------------
                                                         |                                           |
                                                         |                                           |
                                                         |                                           |
-mytherad t=new mythread();      **t.start();**               *thread start allocate process *               *if run method
+mythread t=new mythread();      **t.start();**               *thread start allocate process *               *if run method
 ***new/Born**           ---------------------------->Ready/--------------------------------------->Running -------------------->Dead
                                                     Runnable                                                *completed*
 

@@ -26,7 +26,7 @@ public class T15_Thread_Join_Demo {
 }
 /*
 in the above examples child threads calls the join method on main thread objects hence child thread has to wait
-until comleting main thread
+until completing main thread
 in this case output is --->
 Main Thread
 Main Thread
