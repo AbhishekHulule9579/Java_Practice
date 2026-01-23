@@ -1,13 +1,13 @@
 Multithreading =Executing multiple tasks simultaneously is known as the multithreading.
 
 1)process based multitasking=executing several tasks simultaneously where each task is
-                            separate independant process is known as the process based multitasking.
+                            separate independent process is known as the process based multitasking.
 e.g -1) listening the song on the computer
       2)doing calculation on the same machine
       3)doing the coding at the same time
 * process are the heavyweight task that required their own separate address space
 * it is independent of each other
-*process based multitasking is best suitable for OS level
+*process based multitasking is the best suitable for OS level
 
 2)Thread based multitasking= executing several task simultaneously where is task is
                             separate independent part of same program
@@ -32,18 +32,18 @@ start(){
 2).perform all other mandatory activities
 3).invoke run()
 }
-// for reference code - T2_Child_Dema
+// for reference code - T2_Child_Demo
 
 **************** case 4 -Overloading of the run method *************
 
 overloading of run method is always possible but thread class start method can invoke no-argument run method
-the other overloaded method we have call explicity like a normal method call
+the other overloaded method we have call explicit like a normal method call
 
 for reference -code --- T3_No_Thread_Calling.java
 
 ***************** case 5 - if we are not overriding run method *******************
 
-it is higly recommended to override run method otherwise don't go for multithreading concept
+it is highly recommended to override run method otherwise don't go for multithreading concept
 
 **for reference code -- T4_Not_Overriding_run_Method
 
@@ -65,7 +65,7 @@ for reference code - T6_Overriding_Run_Method_2
 
 ******************* case 8- thread Lifecycle ***************************
 
-mytherad t=new mythread();      **t.start();**               *thread start allocate process *               *if run method
+mythread t=new mythread();      **t.start();**               *thread start allocate process *               *if run method
 ***new/Born**           ---------------------------->Ready/---------------------------------------> Running -------------------->Dead
                                                     Runnable                                                *completed*
 
