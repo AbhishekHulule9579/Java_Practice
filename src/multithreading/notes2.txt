@@ -3,7 +3,7 @@
 * 1st approach of the thread =-->mythread -->Thread-->Runnable(Interface)
 * 2nd approach of the thread =--> myRunnable-->Runnable(Interface)
 
-Runnable interface present in Java.lang package and it contains only one method -->Run() method  [public void run()]
+Runnable interface present in Java.lang package, and it contains only one method -->Run() method  [public void run()]
 
 
 **************- case study *****************************
@@ -34,7 +34,7 @@ cases-
  A new thread will be created which is responsible for the execution of myRunnable class run method
 
 4)case 4 - t2.run();
- A new thread won't be create and the myRunnable run method will be executed just like a normal method call
+ A new thread won't be created and the myRunnable run method will be executed just like a normal method call
 
 5)case 5 - r.start();
  we will get compile time error saying "myRunnable doesn't have start capability"

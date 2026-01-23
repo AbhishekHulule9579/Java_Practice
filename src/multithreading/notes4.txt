@@ -2,7 +2,7 @@
 ************* Yield Method ***********
 yield method causes to pass current executing thread to give the chance for the waiting thread
 of same priority ,if there is no waiting thread or all waiting thread have low priority then same thread
-can continue it's execution
+can continue its execution
 
 *if multiple thread are waiting with the same priority then ,which waiting thread will get chance --> we can't
 expect it's depend on the thread schedular
@@ -15,9 +15,9 @@ expect it's depend on the thread schedular
 **** complete prototype of the yield method ****
 public static native void yield()
 
-******thread lifecycle if there is the yield method ****************
+****** thread lifecycle if there is the yield method ****************
 
-                                                         Thread.yeild();
+                                                         Thread.yield();
                                                         --------------------------------------------
                                                         |                                           |
                                                         |                                           |
@@ -26,4 +26,4 @@ mythread t=new mythread();      **t.start();**               *thread start alloc
 ***new/Born**           ---------------------------->Ready/--------------------------------------->Running -------------------->Dead
                                                     Runnable                                                *completed*
 
-for reference -->T13_Thread_Yeild
+for reference -->T13_Thread_Yield

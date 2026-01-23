@@ -11,7 +11,7 @@ Join way to announce
 
 1)public void join()     --->Thrown Interrupted Exception
 2)public void join(long millisecond)   -->Thrown Interrupted Exception
-3)public void join(long millisecond,int macrosecond)    --->Thrown InterruptedException
+3)public void join(long millisecond,int microsecond)    --->Thrown InterruptedException
 
 ** Note-Every join method throws Interrupted Exception which is checked exception ,hence compulsory we should handle
  this exception either by using try catch or throws exception otherwise we will get compile time error
@@ -63,8 +63,8 @@ comparison table of yield ,join and sleep method
 *if multiple thread are trying to operate simultaneously on the same java object then their may be a chance
 of data inconsistency problem to overcome this problem we should go for synchronized key word
 
-*if your are blocked declared as synchronized then at a time only one thread is allowed to execute the method
-are blocked on the given object so that data inconsistecy problem will be resolved
+*if you are blocked declared as synchronized then at a time only one thread is allowed to execute the method
+are blocked on the given object so that data inconsistency problem will be resolved
 
 *the main advantage of synchronize keyword is we can resolve the data inconsistency problem but the main disadvantage
 of the synchronize keyword is it increases waiting time of the threads and create performance problems ,hence if there is
@@ -77,7 +77,7 @@ synchronized keyword then only lock concept will come into the picture .
 the lock then it is allowed to execute any synchronized method on that object once method execution completes
 automatically thread released the lock
 
-*aquiring and releasing lock internally takes care by JVM and programmer is not responsible for this activity
+*acquiring and releasing lock internally takes care by JVM and programmer is not responsible for this activity
 
 * while a thread executing synchronized method on the given object the remaining thread are not allowed to execute
 any synchronized method simultaneously on the same object , but remaining thread are allowed to execute non synchronized
