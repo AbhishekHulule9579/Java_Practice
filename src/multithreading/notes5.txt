@@ -3,7 +3,7 @@
 
 if your thread wants to wait until completing some other thread then we should go for join method
 
-*for example ,if your thread t1 wants to wait until completing t2 then t1 has to call t2.join() .
+* for example ,if your thread t1 wants to wait until completing t2 then t1 has to call t2.join() .
 if t1 execute t2.join then immediately t1 will be entered into waiting states until t2 completes .
 once t2 complete then t1 can continue it's execution
 
@@ -46,7 +46,7 @@ we will get compile time error
 
 ** for reference --> T18_Thread_Sleep_2
 
-**Note - whenever we are calling interrupt method if the target thread not in sleeping state or waiting state
+** Note - whenever we are calling interrupt method if the target thread not in sleeping state or waiting state
 then  there is no impact of interrupt call immediately interrupt call will be waited until target thread entered into
 sleeping or waiting state if the target thread entered the sleeping or waiting state then immediately interrupt
 call will interrupt the target thread.
@@ -58,26 +58,26 @@ comparison table of yield ,join and sleep method
 
 *****************Synchronize Method in the java ********************
 
-*Synchronized is the modifier applicable only for the method and a block but not for classes and variables
+* Synchronized is the modifier applicable only for the method and a block but not for classes and variables
 
-*if multiple thread are trying to operate simultaneously on the same java object then their may be a chance
+* if multiple thread are trying to operate simultaneously on the same java object then their may be a chance
 of data inconsistency problem to overcome this problem we should go for synchronized key word
 
-*if you are blocked declared as synchronized then at a time only one thread is allowed to execute the method
+* if you are blocked declared as synchronized then at a time only one thread is allowed to execute the method
 are blocked on the given object so that data inconsistency problem will be resolved
 
-*the main advantage of synchronize keyword is we can resolve the data inconsistency problem but the main disadvantage
+* the main advantage of synchronize keyword is we can resolve the data inconsistency problem but the main disadvantage
 of the synchronize keyword is it increases waiting time of the threads and create performance problems ,hence if there is
 no specific requirement then it is not recommended to use synchronize keyword.
 
-*internally synchronization is implemented by using lock every object in java has a unique lock ,whenever we are using
+* internally synchronization is implemented by using lock every object in java has a unique lock ,whenever we are using
 synchronized keyword then only lock concept will come into the picture .
 
-*if thread want to execute synchronized method on the given object first it has to get lock of that object once thread got
+* if thread want to execute synchronized method on the given object first it has to get lock of that object once thread got
 the lock then it is allowed to execute any synchronized method on that object once method execution completes
 automatically thread released the lock
 
-*acquiring and releasing lock internally takes care by JVM and programmer is not responsible for this activity
+* acquiring and releasing lock internally takes care by JVM and programmer is not responsible for this activity
 
 * while a thread executing synchronized method on the given object the remaining thread are not allowed to execute
 any synchronized method simultaneously on the same object , but remaining thread are allowed to execute non synchronized
@@ -91,10 +91,10 @@ class{
 on this object t1 came to execute m1 method (it will start executed)if t2 came to execute the m1 method (waiting state) t3 came to
 execute m2 (waiting state) t4 came to execute m3 method (it will get chance immediately)
 
-*lock concept is implemented based on the object but not based on method
+* lock concept is implemented based on the object but not based on method
 
-*non-synchronized area-- This area can be accessed by any no. of thread simultaneously
-*synchronized area -- this area can be accessed by ony one thread at a one time.
+* non-synchronized area-- This area can be accessed by any no. of thread simultaneously
+* synchronized area -- this area can be accessed by ony one thread at a one time.
 
 example -->
  class{
