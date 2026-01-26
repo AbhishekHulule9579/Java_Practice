@@ -1,7 +1,6 @@
 package multithreading;
 
 class myThread5 extends Thread{
-
 }
 public class T11_Thread_Priority {
     public static void main(String[] args) {
