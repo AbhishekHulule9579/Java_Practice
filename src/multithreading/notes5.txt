@@ -109,7 +109,7 @@ example -->
 
 example 2 -->
 class Reservation(){
-     check Avaiablility(){  //non-synchronized
+     check Availability(){  //non-synchronized
         read operation
      }
      book Ticket(){      //synchronized
