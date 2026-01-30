@@ -1,0 +1,61 @@
+
+***     Synchronization ****
+
+* if very few line of the code required synchronization then it is not recommend to declare entire method as
+synchronized we have to enclose those few line of the code by using synchronized block
+
+* the main advantage of synchronized block over synchronized method is it reduces waiting time of threads and
+improves performance of the system/application
+
+* we can declared synchronized block as follows :
+1)To get lock of current object
+synchronized (this){
+  *****
+  *****
+  // of the thread got the lock of the current object then only it is allowed execute this area.
+}
+2)to get lock of particular object
+synchronized (b){
+  ******
+  ******
+  // of the thread got the lock of the particular object b then only it is allowed to execute this area.
+}
+
+3)to get class level lock
+synchronized (display.class){
+  ******
+  ******
+  //of the thread got the class level lock of display then only it is allowed to execute this area.
+}
+
+* if there is the synchronization present, and we call this method then all other method will be stopped until the
+ thread containg the synchronized is executed
+
+** lock concept applicable for object type and class types but not for primitives , hence we can't pass
+primitive argument to synchronized block otherwise we will get compile time error saying unexpected type
+found in the required reference
+
+---->int x=10;
+synchronized(x){
+------
+------
+}
+
+FaQ s -->
+1)what is synchronized keyword and where we can apply?
+-->synchronized is the modifier applicable for methods class but not for variable.
+
+2)explain advantage of synchronized keyword?
+--> we can resolve data inconsistency problem
+
+3)disadvantage of the synchronized keyword
+-->it increases waiting time of thread and create performance time of thread
+
+4)what is the race condition?
+--> if multiple thread operating simultaneously on same java object then there may be the problem of
+data inconsistency  == race condition
+
+5)how we can resolve race condition ?
+--> by using the synchronized
+
+6)
