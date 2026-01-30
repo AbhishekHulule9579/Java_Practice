@@ -58,4 +58,22 @@ data inconsistency  == race condition
 5)how we can resolve race condition ?
 --> by using the synchronized
 
-6)
+6)what is the object lock and when it is required?
+--> when ever a thread want to execute the synchronized method  then the thread requird object level lock
+
+7) what is class level lock and when it is required ?
+-->whenever a thread want to execute static synchronization method then it is required
+
+8)what is the difference between class level and object level lock ?
+-->when ever a thread want to execute the synchronized method  then the thread requird object level lock and
+whenever a thread want to execute static synchronization method then it is required
+
+9)what is the synchronized block ?
+10) how to declared synchronized block to lock of current object
+11) how to declared synchronized block to lock of class level lock
+12)  what is the advantage of synchronized block over synchronized method ?
+-->performance and the waiting time will be increased
+13)is thread can be acquired multiple lock simultaneously?
+-->No
+14)A thread can acquired multiple thread simultaneously?
+--> yes
