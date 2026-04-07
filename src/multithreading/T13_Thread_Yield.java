@@ -20,8 +20,8 @@ public class T13_Thread_Yield  {
 }
 // in the above program if we are commenting the line 1 then both the thread will execute simultaneously and we can't except
 //which thread will complete first
-// if we are not commenting the line 1 then child thread always calls yield method becaiuse of that
-//main thread will gwt chance more number of time and the chance of completing main thread first is high
+// if we are not commenting the line 1 then child thread always calls yield method because of that
+//main thread will get chance more number of time and the chance of completing main thread first is high
 //some platform won't provide proper support for the yield method
 /*main thread
 main thread

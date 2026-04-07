@@ -43,7 +43,7 @@ synchronized(x){
 
 FaQ s -->
 1)what is synchronized keyword and where we can apply?
--->synchronized is the modifier applicable for methods class but not for variable.
+-->synchronized is the modifier applicable for methods, class but not for variable.
 
 2)explain advantage of synchronized keyword?
 --> we can resolve data inconsistency problem

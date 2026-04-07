@@ -27,7 +27,7 @@ like deadlock)  ,in this case thread has to wait infinite amount of time
 ** reference --->T16_Thread_Dead
 
 
-*****************Thread Sleep *************************
+***************** Thread Sleep *************************
 if your thread don't want to perform any operation for a particular amount of time then we should go for sleep
 method
 

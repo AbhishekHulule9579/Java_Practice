@@ -14,9 +14,9 @@ e.g -1) listening the song on the computer
 
 * Thread = thread is the smallest unit of dispatchable code
 
-to develop the web server and appliction servers there we can use multithreading
+to develop the web server and application servers there we can use multithreading
 
-*******Ways to create the thread ******************
+******* Ways to create the thread ******************
 
 1)By extending thread class
 2)By implementing runnable interface
