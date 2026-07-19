@@ -17,6 +17,7 @@ class T3_No_Thread_Calling {
     public static void main(String[] args) {
         Mythread t=new Mythread();
         t.start();
+        t.run(2);
 
         // in this method only this first run "no args constuctor is called and not another
         // int

@@ -51,7 +51,7 @@ then  there is no impact of interrupt call immediately interrupt call will be wa
 sleeping or waiting state if the target thread entered the sleeping or waiting state then immediately interrupt
 call will interrupt the target thread.
 
-if the target thread never entered into sleeping or waiting state i it's lifetime then there is no impact of
+if the target thread never entered into sleeping or waiting state in it's lifetime then there is no impact of
 interrupt call this is the only case where interrupt call will be wasted .
 
 comparison table of yield ,join and sleep method
