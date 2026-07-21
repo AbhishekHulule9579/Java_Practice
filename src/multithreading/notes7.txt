@@ -1,0 +1,23 @@
+******************  wait    *************************
+two thread can communicate with each other by using wait ,notify,notify all method
+
+the thread which is expecting updation is responsible to call wait method then, immediately will enter into waiting state
+
+the thread which is responsible to perform updation, after performing updation it is responsible notify method,
+ then waiting thread will get notification and continue it's execution with those updated item
+
+ wait,notify,notifyall is present in the object class and not in the thread class
+
+wait,notify,notifyall is only applicable to thread
+
+=================
+wait ,notify,notify all methods present in the object class but not in thread class because thread can call this method
+on any java object
+===================
+
+to call wait,notify,notify all methods on any object, thread should be owner of that object i.e the thread should
+has lock of that object i.e the thread should be inside synchronized area
+
+hence we can call wait,notify,notify all methods only from synchronized area otherwise we will get run time Exception saying
+IllegalMonitorStateException
+
