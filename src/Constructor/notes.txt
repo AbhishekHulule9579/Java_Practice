@@ -1,0 +1,25 @@
+
+Constructor == is the special method that is called when an object is created.
+
+purpose of the constructor is to perform thr initialization
+
+for every object constructor will be executed separately
+>>>>>>>>>> C2
+
+**** Rules for the constructor  *****
+
+1) name of the constructor and class needs to be same
+2) return type of constructor is not applicable for the constructor not even void is not applicable
+class test{
+    void test(){
+
+    }
+}
+---> compiler treats it as method and not as constructor
+
+3) only public,private,default and protected is allowed as the access modifier in the constructor and
+final,static strict, native, synchronized are not allowed then the compile time error will occur
+
+4) constructor can have the private access modifier but it cannot be accessed by the other class
+by making the constructor private we are making class as singletone class
+
