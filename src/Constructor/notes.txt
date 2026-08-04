@@ -55,3 +55,30 @@ we can't take super and this in one constructor
 1) we can use only inside constructor
 2) we should use only on first line
 3) we can use only one simultaneously but not the both
+
+**************************** super and this **************************************
+class parent{
+    String s="Parent class";
+}
+public class C4_Super_This extends parent {
+    public void meth(){
+        String s="Child class";
+
+        System.out.println(s);
+        System.out.println(this.s);
+        System.out.println(super.s);
+    }
+    public static void main(String[] args) {
+        meth();    <--------------- here will be error because in the static area we are calling the super and this
+    }
+}
+error ==> non static variable cannot be reference from a static area
+
+// so here we cannot use the super and this because the area is the staic so super and this will not work there
+// so if we wants to use the super then we have to write those method in non-static area
+
+********************************* Constructor overloading ******************************************
+within the class we can write any number of the constructor
+like student(int id,String name,int marks)
+student(String name,int marks)
+student(int id);
