@@ -23,3 +23,35 @@ final,static strict, native, synchronized are not allowed then the compile time 
 4) constructor can have the private access modifier but it cannot be accessed by the other class
 by making the constructor private we are making class as singletone class
 
+********************** Default constructor *****************************
+
+** every class in java including abstract class also contain the default constructor
+
+** every class in java contain constructor it may be default or parameterized constructor but it cannot be both constructor
+
+** if you are writing the parameterized constructor then the default constructor will not come in the particular class
+
+** the access modifier of the default constructor is same as the access modifier of the class
+if class is public then ---> public constructor
+default ----> default
+for just of this is applicable
+
+** default constructor contain just one line
+public test{
+    public test(){
+    super(); <---- just this line is present in it
+    }
+}
+
+** it is no-argumment call to super class constructor
+
+************** super() & this() ****************************
+
+the first line in the constructor needs to be always super() or this() if you are not writing then compiler will
+always take it by default
+
+we can't take super and this in one constructor
+
+1) we can use only inside constructor
+2) we should use only on first line
+3) we can use only one simultaneously but not the both
