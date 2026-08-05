@@ -18,6 +18,8 @@ on any java object
 to call wait,notify,notify all methods on any object, thread should be owner of that object i.e the thread should
 has lock of that object i.e the thread should be inside synchronized area
 
+if not then the exception will occur named as IllegalMonitorStateException
+
 hence we can call wait,notify,notify all methods only from synchronized area otherwise we will get run time Exception saying
 IllegalMonitorStateException
 
