@@ -82,3 +82,95 @@ within the class we can write any number of the constructor
 like student(int id,String name,int marks)
 student(String name,int marks)
 student(int id);
+
+*********************************** Constructor overriding **********************************************
+inheritance concept is not applicable for the constructor
+so it doesn't follows the overriding concept
+
+******************************* absract class & interface constructor ****************
+we can apply constructor in the abstract class
+
+we cannot apply  constructor inside the interface because every method inside the interface is public static final and
+instantiation happens on declaration only so we cannot apply constructor inside the interface
+
+************************** parent and constructor calls by super ***********************
+class P{
+
+}
+class C extends P{
+
+}  =====...............>>>>>> it is valid
+
+## internally compiler is going to write the default constructor inside the class P and C --> like
+class P{
+    P(){
+        super();
+    }
+}
+class C extend P(){
+    C(){
+        super();
+    }
+}
+## so after calling the P class then it is going to check if there is default constructor inside the class P
+so then it is not going to throw the error
+------------------------------------------------------------------
+class P{
+    P(){
+
+    }
+}
+class C extends P{
+
+}  -----------+++++++++++=========>>>>>>>> it is also valid
+
+## internally it will perform like
+class P{
+    P(){
+        super();
+    }
+}
+class C extends P{
+    C(){
+        super();
+    }
+}
+so it will perform normally
+---------------------------------------------------------------------
+class P{
+    P(int i){
+
+    }
+}
+class C extends P{
+
+}   -------------=======================>>>>> it is invalid
+
+
+internally it will perform like this
+class P{
+    P(int i){
+        super();
+    }
+}
+class C extends P{
+    C(){
+    super();
+    }
+}
+----> so it is calling the constructor containing the integer so it will throw the Comiple time error
+
+so if we write it like this then it will work
+ class P{
+     P(int i){
+        super();
+     }
+ }
+ class C extends P{
+    C(){
+        super(20);
+    }
+ }
+ --------> it will work fine
+
+-----------------------------------------------------------
